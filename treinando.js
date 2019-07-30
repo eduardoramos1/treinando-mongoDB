@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// configurar conexão com ao banco mongo usando mongoose / a rota 'treinando' indica que banco de dados será usado, no caso, será usando o bd 'treinando'
+// configurar conexão com ao banco mongo usando mongoose / a rota 'treinando' indica que banco de dados será usado, no caso, será usando o bd 'treinando', se não existir um banco com esse nome, então o banco será criado automaticamente
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/treinando", {useNewUrlParser: true})
     .then(suc => console.log('Conexão com banco de dados iniciada!'))
